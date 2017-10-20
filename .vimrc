@@ -40,6 +40,8 @@ set shiftwidth=4
 set expandtab
 " Highlight search result
 set hlsearch
+" Search as characters are entered
+set incsearch
 
 syntax on
 
