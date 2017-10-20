@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'chun-yang/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,16 +39,24 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
-" Highlight search result
+" Highlight search results
 set hlsearch
 " Search as characters are entered
 set incsearch
+" Visual autocomplete for command menu
+set wildmenu
+" Highlight matching [{()}]
+set showmatch
+
+" Move vertically by visual line (do not skip the wrapped part of the line in
+" favor of the next 'real' line)
+nnoremap j gj
+nnoremap k gk
 
 syntax on
 
 " ctags
-" Also check parent folders for tags file. 
+" Also check parent folders for tags file.
 set tags+=tags;~
 
 set backspace=indent,eol,start
-
